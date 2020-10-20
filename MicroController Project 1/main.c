@@ -24,7 +24,7 @@ int main() {
             printf("Product = %lf \n", product);
         }
     
-    
+ 
     printf("Na du Fickschnitzel");
     puts("Selber!")
     
