@@ -27,9 +27,9 @@ int main() {
     
     
     printf("Test1");
-    printf("Test2");
+    printf("Test3");
     printf("Test3");
     
-    printf("Test4");
+    printf("Test5");
         return 0;
 }
