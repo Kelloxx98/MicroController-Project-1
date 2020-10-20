@@ -25,8 +25,8 @@ int main() {
         }
     
  
-    printf("Na du Fickschnitzel");
-    puts("Selber!")
+    printf("Na du Fickschnitzel \n");
+    puts("Selber! \n");
     
         return 0;
 }
