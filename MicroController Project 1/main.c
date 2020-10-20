@@ -25,7 +25,7 @@ int main() {
         }
     
     
-    printf("Na du Fickschnitzel");
+    printf("Na du Fickschnitzel \n");
     
         return 0;
 }
