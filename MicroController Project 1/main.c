@@ -25,11 +25,7 @@ int main() {
         }
     
     
+    printf("Na du Fickschnitzel");
     
-    printf("Test1");
-    printf("Test3");
-    printf("Test3");
-    
-    printf("Test5");
         return 0;
 }
