@@ -26,7 +26,6 @@ int main() {
     
  
     printf("Na du Fickschnitzel");
-    puts("Selber!")
-    
-        return 0;
+    puts("Selber!");
+    return 0;
 }
