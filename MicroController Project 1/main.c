@@ -7,8 +7,29 @@
 
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+int main() {
+    
+    double a, b, product;
+        printf("Enter two numbers: ");
+    scanf("%lf %lf", &a, &b);
+     
+        // Calculating product
+        product = a * b;
+
+        // Result up to 2 decimal point is displayed using %.2lf
+    
+        if ( product < 5 )
+        {printf("Zu klein. Wie dein Pimmel. Höhö. \n");
+        } else {
+            printf("Product = %lf \n", product);
+        }
+    
+    
+    
+    printf("Test1");
+    printf("Test2");
+    printf("Test3");
+    
+    printf("Test4");
+        return 0;
 }
