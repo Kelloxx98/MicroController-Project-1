@@ -12,6 +12,7 @@
 int main() {
 
  // hab da mal das irrelevante gelöscht du mongo!
+	
     printf("Na du Fickschnitzel\n");
     puts("Selber!");
 
@@ -38,3 +39,30 @@ int main() {
 	}
         return 0;
 }
+    /*
+	Der Alte Kram:
+	
+	double a, b, product;
+        printf("Enter two numbers: ");
+    scanf("%lf %lf", &a, &b);
+
+        // Calculating product
+        product = a * b;
+
+        // Result up to 2 decimal point is displayed using %.2lf
+
+        if ( product < 5 )
+        {
+        	printf("Zu klein. Wie dein Pimmel. Höhö. \n");
+        }
+        else {
+            printf("Product = %lf \n", product);
+        }
+    
+
+ 
+    printf("Na du Fickschnitzel");
+    puts("Selber!");
+    return 0;*/
+
+
