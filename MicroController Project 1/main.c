@@ -29,6 +29,8 @@ int main() {
 		zaehler++;
 		}
 	}
+    
+    printf("Hallo");
 
 
 	int k;
