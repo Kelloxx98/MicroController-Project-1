@@ -18,12 +18,13 @@ int main() {
 
 	char Kartenwert[13] = {'2','3','4','5','6','7','8','9','Z','B','D','K','A'};
 	char Kartenfarbe[4] = {'C','H','P','K'};
-	char Deck[53][4] = { };
+    const int Deckgroesse = 52;
+	char Deck[Deckgroesse][3] = { };
 	int zaehler=0;
 	int i;
 	int j;
-	for (i=0;i < 13;i++){
-		for (j=0; j < 4;j++){
+	for (i=0;i < strlen(Kartenwert);i++){
+		for (j=0; j < strlen(Kartenfarbe);j++){
 		char karte[3] = {Kartenfarbe[j],Kartenwert[i]};
 		strcat(Deck[zaehler],karte);
 		zaehler++;
@@ -34,7 +35,7 @@ int main() {
 
 
 	int k;
-	for (k=0;k<52;k++){
+	for (k=0;k<Deckgroesse;k++){
 
 		printf("Karte %i = %s\n",k+1 ,Deck + k);
 
