@@ -21,10 +21,8 @@ int main() {
     const int Deckgroesse = 52;
 	char Deck[Deckgroesse][3] = { };
 	int zaehler=0;
-	int i;
-	int j;
-	for (i=0;i < strlen(Kartenwert);i++){
-		for (j=0; j < strlen(Kartenfarbe);j++){
+	for (int i=0;i < strlen(Kartenwert);i++){
+		for (int j=0; j < strlen(Kartenfarbe);j++){
 		char karte[3] = {Kartenfarbe[j],Kartenwert[i]};
 		strcat(Deck[zaehler],karte);
 		zaehler++;
