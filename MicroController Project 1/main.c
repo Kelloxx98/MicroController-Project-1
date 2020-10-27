@@ -18,7 +18,7 @@ int main() {
 
 	char Kartenwert[13] = {'2','3','4','5','6','7','8','9','Z','B','D','K','A'};
 	char Kartenfarbe[4] = {'C','H','P','K'};
-	char Deck[53][4] = { NULL };
+	char Deck[53][4] = { };
 	int zaehler=0;
 	int i;
 	int j;
