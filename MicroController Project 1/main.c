@@ -18,26 +18,39 @@ int main() {
 
 	char Kartenwert[13] = {'2','3','4','5','6','7','8','9','Z','B','D','K','A'};
 	char Kartenfarbe[4] = {'C','H','P','K'};
-    const int Deckgroesse = 52;
-	char Deck[Deckgroesse][3] = { };
+	char Deck[52][3] = { NULL };
 	int zaehler=0;
-	for (int i=0;i < strlen(Kartenwert);i++){
-		for (int j=0; j < strlen(Kartenfarbe);j++){
-		char karte[3] = {Kartenfarbe[j],Kartenwert[i]};
-		strcat(Deck[zaehler],karte);
-		zaehler++;
+	int i;
+	int j;
+	int l;
+	FILE *Deckausgabe;
+		Deckausgabe = fopen("C:/Users/Lukas/Desktop/Test/TestDatei.CSV","w");
+		fprintf(Deckausgabe,",");
+	for (l=0;l < 13;l++){
+		fprintf(Deckausgabe,"%c ,",Kartenwert[l]);
+	}
+	fprintf(Deckausgabe,"\n");
+	for (i=0;i < strlen(Kartenfarbe);i++){
+		fprintf(Deckausgabe,"%c ,",Kartenfarbe[i]);
+		for (j=0; j < strlen(Kartenwert);j++){
+		char karte[3] = {Kartenfarbe[i],Kartenwert[j]};
+		fprintf(Deckausgabe,"%s ,",karte);
+		//strcat(Deck[zaehler],karte);
+		//zaehler++;
 		}
+		fprintf(Deckausgabe,"\n");
 	}
     
     printf("Hallo");
 
 
-	int k;
-	for (k=0;k<Deckgroesse;k++){
 
-		printf("Karte %i = %s\n",k+1 ,Deck + k);
+	/*int k;
+	for (k=0;k<52;k++){
 
-	}
+		fprintf(Deckausgabe,"Karte %i = %s,",k+1 ,Deck + k);
+
+	}*/
         return 0;
 }
     /*
@@ -65,5 +78,3 @@ int main() {
     printf("Na du Fickschnitzel");
     puts("Selber!");
     return 0;*/
-
-
