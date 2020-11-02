@@ -11,6 +11,30 @@
 
 int main() {
 
+    char firstLine[150];
+    char secondLine[150];
+    
+    FILE * filetoread = fopen("/Users/kieranlienau/Desktop/Eingabe.txt", "r");
+    
+    if (filetoread == NULL) {
+        printf("Open failed");
+        return 1;
+    }
+    
+    
+    
+    while (fgetc(filetoread) != EOF) {
+        fgets(firstLine, 150, filetoread);
+        puts(firstLine);
+    }
+        
+    
+    fclose(filetoread);
+    
+    return 0;
+    
+}
+    /*
  // hab da mal das irrelevante gelöscht du mongo!
 	
     printf("Na du Fickschnitzel\n");
@@ -39,7 +63,7 @@ int main() {
 	}
         return 0;
 }
-    /*
+    
 	Der Alte Kram:
 	
 	double a, b, product;
@@ -63,6 +87,8 @@ int main() {
  
     printf("Na du Fickschnitzel");
     puts("Selber!");
-    return 0;*/
+     
+     */
+   
 
 
