@@ -14,12 +14,13 @@ int main() {
     int i = 0;
     int j = 0;
     
-    int r = 128;
-    int l = 128;
+    const int r = 128;
+    const int l = 128;
     
-    char line[l][r];
-    
-    FILE * filetoread = fopen("/Users/kieranlienau/Desktop/Eingabe.txt", "r");
+    char input[r][l] = {NULL};
+
+
+    FILE * filetoread = fopen("/Users/kieranlienau/Desktop/Eingabe_Ausgabe/Eingabe.txt", "r");
     
     
     if(filetoread == NULL) {
@@ -27,78 +28,70 @@ int main() {
         return 1;
     }
     
+   
     
-    while(fgets(line[i], l, filetoread))
+    while(fgets(input[i], l, filetoread))
     {
-        line[i][strlen(line[i])] = '\0';
+        input[i][strlen(input[i])] = '\0';
         i++;
     }
     j = i;
     
     for (i = 0; i < j; ++i) {
-        printf(" %s \n", line[i]);
+        printf(" %s", input[i]);
     }
     
     fclose(filetoread);
     
+    
+    
+    int x;
+    
+    FILE *Deckausgabe;
+        Deckausgabe = fopen("/Users/kieranlienau/Desktop/Eingabe_Ausgabe/Ausgabe.txt","w");
+        
+    
+    for (x = 0; x < r; x++) {
+        fprintf(Deckausgabe, "%s" , input[x]);
+    }
+         
+         
     return 0;
 }
 
-/*
- // hab da mal das irrelevante gelöscht du mongo!
+    
+         /*
+         
+     char Kartenwert[13] = {'2','3','4','5','6','7','8','9','Z','B','D','K','A'};
+    char Kartenfarbe[4] = {'C','H','P','K'};
+    char Deck[52][3] = { NULL };
+     
+    
+    
+    
+    
+    FILE *Deckausgabe;
+        Deckausgabe = fopen("/Users/kieranlienau/Desktop/Eingabe_Ausgabe/Ausgabe.txt","w");
+        fprintf(Deckausgabe,",");
+    for (z=0;z < 13;z++){
+        fprintf(Deckausgabe,"%c ,",Kartenwert[l]);
+    }
+    fprintf(Deckausgabe,"\n");
+    for (z=0;z < strlen(Kartenfarbe);i++){
+        fprintf(Deckausgabe,"%c ,",Kartenfarbe[z]);
+        for (x=0; x < strlen(Kartenwert);x++){
+        char karte[3] = {Kartenfarbe[z],Kartenwert[x]};
+        fprintf(Deckausgabe,"%s ,",karte);
+        
+        }
+        fprintf(Deckausgabe,"\n");
+    }
+    
+    printf("Hallo");
+          */
  
- printf("Na du Fickschnitzel\n");
- puts("Selber!");
- 
- char Kartenwert[13] = {'2','3','4','5','6','7','8','9','Z','B','D','K','A'};
- char Kartenfarbe[4] = {'C','H','P','K'};
- char Deck[53][4] = { };
- int zaehler=0;
- int i;
- int j;
- for (i=0;i < 13;i++){
- for (j=0; j < 4;j++){
- char karte[3] = {Kartenfarbe[j],Kartenwert[i]};
- strcat(Deck[zaehler],karte);
- zaehler++;
- }
- }
- 
- 
- int k;
- for (k=0;k<52;k++){
- 
- printf("Karte %i = %s\n",k+1 ,Deck + k);
- 
- }
- return 0;
- }
- 
- Der Alte Kram:
- 
- double a, b, product;
- printf("Enter two numbers: ");
- scanf("%lf %lf", &a, &b);
- 
- // Calculating product
- product = a * b;
- 
- // Result up to 2 decimal point is displayed using %.2lf
- 
- if ( product < 5 )
- {
- printf("Zu klein. Wie dein Pimmel. Höhö. \n");
- }
- else {
- printf("Product = %lf \n", product);
- }
- 
- 
- 
- printf("Na du Fickschnitzel");
- puts("Selber!");
- 
- */
 
+ 
 
-
+   
+        
