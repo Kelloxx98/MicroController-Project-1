@@ -10,60 +10,95 @@
 #include <string.h>
 
 int main() {
-
- // hab da mal das irrelevante gelöscht du mongo!
-	
-    printf("Na du Fickschnitzel\n");
-    puts("Selber!");
-
-	char Kartenwert[13] = {'2','3','4','5','6','7','8','9','Z','B','D','K','A'};
-	char Kartenfarbe[4] = {'C','H','P','K'};
-    const int Deckgroesse = 52;
-	char Deck[Deckgroesse][3] = { };
-	int zaehler=0;
-	for (int i=0;i < strlen(Kartenwert);i++){
-		for (int j=0; j < strlen(Kartenfarbe);j++){
-		char karte[3] = {Kartenfarbe[j],Kartenwert[i]};
-		strcat(Deck[zaehler],karte);
-		zaehler++;
-		}
-	}
     
-    printf("Hallo");
-
-
-	int k;
-	for (k=0;k<Deckgroesse;k++){
-
-		printf("Karte %i = %s\n",k+1 ,Deck + k);
-
-	}
-        return 0;
+    int i = 0;
+    int j = 0;
+    
+    int r = 128;
+    int l = 128;
+    
+    char line[l][r];
+    
+    FILE * filetoread = fopen("/Users/kieranlienau/Desktop/Eingabe.txt", "r");
+    
+    
+    if(filetoread == NULL) {
+        printf("Opening failed");
+        return 1;
+    }
+    
+    
+    while(fgets(line[i], l, filetoread))
+    {
+        line[i][strlen(line[i])] = '\0';
+        i++;
+    }
+    j = i;
+    
+    for (i = 0; i < j; ++i) {
+        printf(" %s \n", line[i]);
+    }
+    
+    fclose(filetoread);
+    
+    return 0;
 }
-    /*
-	Der Alte Kram:
-	
-	double a, b, product;
-        printf("Enter two numbers: ");
-    scanf("%lf %lf", &a, &b);
 
-        // Calculating product
-        product = a * b;
-
-        // Result up to 2 decimal point is displayed using %.2lf
-
-        if ( product < 5 )
-        {
-        	printf("Zu klein. Wie dein Pimmel. Höhö. \n");
-        }
-        else {
-            printf("Product = %lf \n", product);
-        }
-    
-
+/*
+ // hab da mal das irrelevante gelöscht du mongo!
  
-    printf("Na du Fickschnitzel");
-    puts("Selber!");
-    return 0;*/
+ printf("Na du Fickschnitzel\n");
+ puts("Selber!");
+ 
+ char Kartenwert[13] = {'2','3','4','5','6','7','8','9','Z','B','D','K','A'};
+ char Kartenfarbe[4] = {'C','H','P','K'};
+ char Deck[53][4] = { };
+ int zaehler=0;
+ int i;
+ int j;
+ for (i=0;i < 13;i++){
+ for (j=0; j < 4;j++){
+ char karte[3] = {Kartenfarbe[j],Kartenwert[i]};
+ strcat(Deck[zaehler],karte);
+ zaehler++;
+ }
+ }
+ 
+ 
+ int k;
+ for (k=0;k<52;k++){
+ 
+ printf("Karte %i = %s\n",k+1 ,Deck + k);
+ 
+ }
+ return 0;
+ }
+ 
+ Der Alte Kram:
+ 
+ double a, b, product;
+ printf("Enter two numbers: ");
+ scanf("%lf %lf", &a, &b);
+ 
+ // Calculating product
+ product = a * b;
+ 
+ // Result up to 2 decimal point is displayed using %.2lf
+ 
+ if ( product < 5 )
+ {
+ printf("Zu klein. Wie dein Pimmel. Höhö. \n");
+ }
+ else {
+ printf("Product = %lf \n", product);
+ }
+ 
+ 
+ 
+ printf("Na du Fickschnitzel");
+ puts("Selber!");
+ 
+ */
+
 
 
